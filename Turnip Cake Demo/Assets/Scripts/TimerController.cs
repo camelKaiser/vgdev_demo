@@ -13,10 +13,11 @@ public class TimerController : MonoBehaviour
     private int timeleftint;
 
     public bool gameover = false;
-    public bool win = false; 
+    public bool win = false;
+    public bool pickup = false;
 
     public GameObject sunlight;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,9 @@ public class TimerController : MonoBehaviour
             timeleft -= Time.deltaTime;
             timeleftint = (int)Math.Round(timeleft);
             if (timeleft < 0) {
-                timeleft = 10; 
-                
-                isday = !isday; 
+                timeleft = 10;
+
+                isday = !isday;
             }
 
             if (isday) {
